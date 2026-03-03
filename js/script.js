@@ -269,17 +269,15 @@ elNext.addEventListener("click", () => {
    generateQuestion();
 });
 
-elReset.addEventListener("click", () => {
-   resetQuiz(true);
-   elReset.disabled = false;
-   generateQuestion();
-});
-
 restartBtn.addEventListener("click", () => {
-   resultOverlay.classList.add("hidden");
-   resetQuiz(true);
-   elReset.disabled = false;
-   generateQuestion();
+   // Qayta boshlamasin, hazil xabar chiqsin :)
+   resultTitle.textContent = `😄 Hazillashdim, qayta boshlanmedi!`;
+   resultText.innerHTML = `
+      Qayta boshlash yo‘q 😄<br/>
+   `;
+
+   // Overlay yopilmasin — user xabarni ko‘rsin
+   resultOverlay.classList.remove("hidden");
 });
 
 closeResultBtn.addEventListener("click", () => {
