@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>For only Sherali</title>
+   <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+   <div class="modalOverlay" id="startOverlay">
+      <div class="modal" role="dialog" aria-modal="true">
+         <h2>Testni boshlashlazetion</h2>
+         <p>Ismingizni va savollar sonini kiriting (minimum 10 ta bo'lsin). Savollar oma takrorlanmaydi.</p>
+
+         <div class="inputCol">
+            <label class="fieldLabel" for="nameInput">Ism yoki nick</label>
+            <input id="nameInput" type="text" placeholder="Masalan: Islom" autocomplete="name" />
+         </div>
+
+         <div class="inputCol">
+            <label class="fieldLabel" for="countInput">Savollar soni</label>
+            <input id="countInput" type="number" min="15" step="1" />
+            <p class="miniHint" id="countHint">—</p>
+         </div>
+
+         <div class="actions">
+            <button class="btn primary" id="startBtn">Boshlanetion</button>
+         </div>
+
+         <p class="hint">Enter bosib ham boshlashingiz mumkin.</p>
+      </div>
+   </div>
+
+   <div class="modalOverlay hidden" id="resultOverlay">
+      <div class="modal" role="dialog" aria-modal="true">
+         <h2 id="resultTitle">Natija</h2>
+         <p id="resultText"></p>
+         <div class="actions">
+            <button class="btn primary" id="restartBtn">Qayta boshlash</button>
+            <button class="btn" id="closeResultBtn">Yopish</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="app">
+      <div class="topbar">
+         <div class="title">
+            <h1>Englishtion to Uzbeketion</h1>
+            <p id="welcomeLine">Ism: —</p>
+         </div>
+         <div class="stats">
+            <div class="pill">Score: <b id="score">0</b></div>
+            <div class="pill">Savol: <b id="qNum">0</b>/<b id="qTotal">0</b></div>
+         </div>
+      </div>
+
+      <div class="content">
+         <div class="card">
+            <div class="label">So‘z tarjimasini toping</div>
+            <h2 class="question" id="questionWord">—</h2>
+
+            <div class="options" id="options"></div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <div class="actions">
+               <button class="btn primary" id="nextBtn" disabled>Next</button>
+               <button class="btn" id="resetBtn" disabled>Reset</button>
+            </div>
+         </div>
+      </div>
+
+      <div class="footer">
+         <div id="meta">Lug‘at so‘zlari: —</div>
+         <div>Javob tanlang → Next</div>
+      </div>
+   </div>
+   <script src="/js/script.js">
+   </script>
+</body>
+
+</html>
