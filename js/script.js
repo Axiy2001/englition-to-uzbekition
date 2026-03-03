@@ -270,13 +270,10 @@ elNext.addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
-   // Qayta boshlamasin, hazil xabar chiqsin :)
    resultTitle.textContent = `😄 Hazillashdim, qayta boshlanmedi!`;
    resultText.innerHTML = `
       Qayta boshlash yo‘q 😄<br/>
    `;
-
-   // Overlay yopilmasin — user xabarni ko‘rsin
    resultOverlay.classList.remove("hidden");
 });
 
